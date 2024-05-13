@@ -1,4 +1,4 @@
-package com.caiwei.spring.controller;
+package com.atguigu.cloud.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

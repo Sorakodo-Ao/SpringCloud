@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.caiwei.spring</groupId>
-    <artifactId>cloudalibaba-config-nacos-client3377</artifactId>
+    <artifactId>Nacos-Test</artifactId>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
@@ -49,5 +49,4 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-
 </project>

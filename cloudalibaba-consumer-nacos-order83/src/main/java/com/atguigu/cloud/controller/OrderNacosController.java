@@ -1,4 +1,4 @@
-package com.caiwei.spring.controller;
+package com.atguigu.cloud.controller;
 
 import com.alibaba.nacos.api.model.v2.Result;
 import jakarta.annotation.Resource;
