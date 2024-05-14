@@ -11,6 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class RestLimitController {
+
+
+    @GetMapping("/test")
+    public String Test(){
+        return "testLimit";
+    }
+
+
     @GetMapping("/rateLimit/byUrl")
     public String byUrl() {
         return "按rest地址限流测试OK";
@@ -38,15 +46,19 @@ public class RestLimitController {
     public String fallbackFunction(@PathVariable("id") Integer id, Throwable throwable) {
         return "program error, reason = " + throwable.getMessage();
     }
+
+
+
+    //热点规则
     @GetMapping("/testHotKey")
     @SentinelResource(value = "testHotKey",blockHandler = "dealHandler_testHotKey")
     public String testHotKey(@RequestParam(value = "p1",required = false) String p1,
 
                              @RequestParam(value = "p2",required = false) String p2){
-        return "------testHotKey";
+        return "------testHotKey------";
     }
     public String dealHandler_testHotKey(String p1,String p2,BlockException exception)
     {
-        return "-----dealHandler_testHotKey";
+        return "-----dealHandler_testHotKey------";
     }
 }
