@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 //@FeignClient("cloud-payment-service")
-@FeignClient("cloud-gateway")
+@FeignClient(value = "cloud-gateway")
 public interface PayFeignApi {
     @PostMapping("/pay/add")
     public ResultData addPay(@RequestBody PayDTO payDTO);
