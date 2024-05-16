@@ -30,8 +30,19 @@
 <!--        <table tableName="t_pay" domainObjectName="Pay">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>-->
-        <!--  seata_order -->
+
+<!--        &lt;!&ndash;  seata_order &ndash;&gt;
         <table tableName="t_order" domainObjectName="Order">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>-->
+
+<!--        &lt;!&ndash;seata_storage&ndash;&gt;
+        <table tableName="t_storage" domainObjectName="Storage">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>-->
+
+        <!--seata_account-->
+        <table tableName="t_account" domainObjectName="Account">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
     </context>

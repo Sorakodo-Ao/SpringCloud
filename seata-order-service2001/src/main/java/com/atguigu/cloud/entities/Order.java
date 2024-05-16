@@ -1,12 +1,16 @@
 package com.atguigu.cloud.entities;
 
+import lombok.ToString;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * 表名：t_order
 */
 @Table(name = "t_order")
-public class Order {
+@ToString
+public class Order implements Serializable {
     @Id
     @GeneratedValue(generator = "JDBC")
     private Long id;
